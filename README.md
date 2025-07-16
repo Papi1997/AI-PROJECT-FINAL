@@ -43,7 +43,7 @@ pip install -r requirements.txt
 ### 3. Add Your OpenAI API Key
 Open `modules/gpt_advice.py` and replace:
 ```python
-openai.api_key = 'YOUR_API_KEY'
+openai.api_key = 'myapikey'
 ```
 
 ### 4. Run the Streamlit Dashboard
