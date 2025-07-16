@@ -2,7 +2,7 @@
 import openai
 
 def gpt_financial_advice(user_context):
-    openai.api_key = 'TONNY ONWONGA_API_KEY'
+    openai.api_key = 'htpps:fdghjkl;koij35378$#%&*..'
     prompt = f"""
     You are a smart financial assistant. A user has the following context:
     {user_context}
