@@ -1,62 +1,74 @@
-#  AI-Powered FinTech Personal Finance Manager
+# AI-Powered FinTech Personal Finance Manager
 
 This is an AI-powered personal finance dashboard built with Python and Streamlit.
 
-###  Features:
-- **Expense Forecasting** using Facebook Prophet
-- ** GPT-4 Financial Advice** via OpenAI API
-- ** Bank + M-PESA API Integration** (simulated)
-- ** Fraud Detection** with anomaly detection
-- ** Streamlit Dashboard** UI
+## Features
 
----
+- **Expense Forecasting**: Predict future expenses using Facebook Prophet.
+- **GPT-4 Financial Advice**: Get personalized financial advice from OpenAI's GPT-4.
+- **Bank and M-PESA API Integration**: Simulated integration for fetching bank and M-PESA transactions.
+- **Fraud Detection**: Detect anomalous transactions using Isolation Forest.
+- **Streamlit Dashboard**: A user-friendly and interactive web interface.
 
-##  Project Structure
+## Project Structure
+
 ```
 AI-PROJECT-FINAL/
-│
-├── fintech_ai_manager.py       # Streamlit app entry point
-├── requirements.txt            # Project dependencies
-├── README.md                   # Documentation
-└── modules/
-    ├── forecasting.py          # Forecast future expenses
-    ├── gpt_advice.py           # GPT-4 financial suggestions
-    ├── bank_api.py             # Simulated transactions / M-PESA
-    └── fraud_detection.py      # Fraud/anomaly detection
+|
+|-- fintech_ai_manager.py       # Streamlit app entry point
+|-- requirements.txt            # Project dependencies
+|-- README.md                   # Documentation
+|-- modules/
+|   |-- Forecasting.py          # Forecast future expenses
+|   |-- Payment_advice.py       # GPT-4 financial suggestions
+|   |-- Bank_API.py             # Simulated transactions / M-PESA
+|   `-- Fraud_detection.py      # Fraud/anomaly detection
+`-- payment_failures_large.csv  # Sample data for fraud detection
 ```
 
----
+## Setup Instructions
 
-##  Setup Instructions
+1. **Clone the Repository**
 
-### 1. Clone the Repository
-```bash
-git clone https://github.com/Papi1997/AI-PROJECT-FINAL.git
-cd AI-PROJECT-FINAL
-```
+   ```bash
+   git clone https://github.com/Papi1997/AI-PROJECT-FINAL.git
+   cd AI-PROJECT-FINAL
+   ```
 
-### 2. Install Dependencies
-```bash
-pip install -r requirements.txt
-```
+2. **Install Dependencies**
 
-### 3. Add Your OpenAI API Key
-Open `modules/gpt_advice.py` and replace:
-```python
-openai.api_key = 'myapikey'
-```
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-### 4. Run the Streamlit Dashboard
-```bash
-streamlit run fintech_ai_manager.py
-```
+3. **Add Your OpenAI API Key**
 
----
+   Open `modules/Payment_advice.py` and replace `'htpps:fdghjkl;koij35378$#%&*..'` with your actual OpenAI API key.
 
-##  Integrate M-PESA Daraja
-You can connect to real M-PESA transactions by modifying `modules/bank_api.py` and adding API requests using your Daraja credentials.
+   ```python
+   openai.api_key = 'YOUR_OPENAI_API_KEY'
+   ```
 
----
+4. **Run the Streamlit Dashboard**
 
-##  License
-MIT License — free to modify and use.
+   ```bash
+   streamlit run fintech_ai_manager.py
+   ```
+
+## How to Use
+
+1. **Enter Your User ID**: Provide a unique user ID to fetch your transaction data.
+2. **Describe Your Financial Situation**: Enter your financial context in the text area. This information will be used by GPT-4 to provide you with personalized financial advice.
+3. **Click "Analyze"**: The application will then:
+   - Fetch your bank transactions.
+   - Forecast your future expenses.
+   - Generate personalized financial advice.
+   - Detect any potential fraudulent transactions.
+
+## Contributing
+
+Contributions are welcome! If you have any ideas, suggestions, or bug reports, please open an issue or submit a pull request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
