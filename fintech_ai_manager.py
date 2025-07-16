@@ -1,14 +1,14 @@
 # ---------- Main Application Entry Point ----------
 
 # Import custom modules for different functionalities
-from modules.Forecasting import forecast_expenses
-from modules.Payment_advice import gpt_financial_advice
-from modules.Bank_API import fetch_bank_transactions
-from modules.Fraud_detection import detect_fraud
+from modules.Forecasting import forecast_expenses   # For predicting future expenses
+from modules.Payment_advice import gpt_financial_advice  # For generating financial advice using GPT
+from modules.Bank_API import fetch_bank_transactions   # For fetching transaction data from bank API
+from modules.Fraud_detection import detect_fraud  # For detecting suspicious transactions
 
 # Import third-party libraries
-import streamlit as st
-import pandas as pd
+import streamlit as st  # Streamlit is used for building the web UI
+import pandas as pd   # Pandas is used for data manipulation and analysis
 
 
 def run_dashboard():
