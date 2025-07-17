@@ -26,12 +26,19 @@ flowchart TD
     H --> Z
     I --> Z
 
-Module	Responsibility
+
 main.py	Runs the app, coordinates all logic, renders UI
+
 bank_api.py	Generates 30 days of mock transactions
+
 forecasting.py	Predicts expenses for next 30 days using Prophet
+
 gpt_advice.py	Sends user context to GPT-4 and returns advice
+
 fraud_detection.py	Identifies suspicious transactions via ML model
+
+
+
 
 ## Features
 
