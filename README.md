@@ -2,6 +2,31 @@
 
 This is an AI-powered personal finance dashboard built with Python and Streamlit.
 
+flowchart TD
+
+    A[User inputs ID and context] --> B[main.py]
+
+    B --> C[fetch_bank_transactions()]
+    C --> C1[bank_api.py returns mock transactions]
+
+    B --> D[forecast_expenses()]
+    D --> D1[forecasting.py uses Prophet for predictions]
+
+    B --> E[gpt_financial_advice()]
+    E --> E1[gpt_advice.py uses GPT-4 API]
+
+    B --> F[detect_fraud()]
+    F --> F1[fraud_detection.py uses IsolationForest]
+
+    D1 --> G[Display forecast chart]
+    E1 --> H[Display GPT advice]
+    F1 --> I[Show suspicious transactions]
+
+    G --> Z[Streamlit UI]
+    H --> Z
+    I --> Z
+
+
 ## Features
 
 - **Expense Forecasting**: Predict future expenses using Facebook Prophet.
