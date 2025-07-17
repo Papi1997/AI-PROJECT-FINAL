@@ -7,7 +7,7 @@ from openai import OpenAI  # Import the OpenAI client library
 api_key = os.getenv("OPENAI_API_KEY")
 
 # Initialize the OpenAI client with the API key
-client = OpenAI(api_key=api_key)
+client = openai.OpenAI(api_key=st.secrets["openai"]["api_key"])
 
 def gpt_financial_advice(user_context):
     """
