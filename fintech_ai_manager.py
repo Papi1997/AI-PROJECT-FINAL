@@ -5,10 +5,12 @@ from modules.Forecasting import forecast_expenses   # For predicting future expe
 from modules.Payment_advice import gpt_financial_advice  # For generating financial advice using GPT
 from modules.Bank_API import fetch_bank_transactions   # For fetching transaction data from bank API
 from modules.Fraud_detection import detect_fraud  # For detecting suspicious transactions
+from modules.Analytics import calculate_spending_by_category
 
 # Import third-party libraries
 import streamlit as st  # Streamlit is used for building the web UI
 import pandas as pd   # Pandas is used for data manipulation and analysis
+import matplotlib.pyplot as plt
 
 
 def run_dashboard():
@@ -56,6 +58,14 @@ def run_dashboard():
         # Display the categorized transactions
         st.subheader("Categorized Transactions")
         st.dataframe(df_txns)
+
+        # Calculate and display spending by category
+        st.subheader("Spending by Category")
+        spending_by_category = calculate_spending_by_category(txns)
+        fig, ax = plt.subplots()
+        ax.pie(spending_by_category, labels=spending_by_category.index, autopct='%1.1f%%')
+        ax.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+        st.pyplot(fig)
 
         # Display the flagged suspicious transactions, if any
         st.subheader("Potential Fraudulent Transactions")
